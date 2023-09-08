@@ -3,9 +3,14 @@ package com.proxy.main;
 public class HighestCommonFactor {
 
     public int getHighestCommonFactor(int[] numbers) {
-        int highestCommonFactor = numbers[0];
-        for(int number:numbers)  {
-            highestCommonFactor = getHighestCommonFactor(highestCommonFactor, number);
+        int highestCommonFactor=0;
+        try {
+            highestCommonFactor = numbers[0];
+            for(int number:numbers)  {
+                highestCommonFactor = getHighestCommonFactor(highestCommonFactor, number);
+            }
+        }catch (Exception ex){
+            System.out.println("Please insert some integers in the list");
         }
         return highestCommonFactor;
     }
